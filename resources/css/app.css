@@ -1,0 +1,118 @@
+/* ===== Paleta ===== */
+:root{
+  --fg-primary:#d83d71;
+  --fg-primary-600:#c13366;
+  --fg-primary-700:#a82b57;
+  --fg-dark:#2a2a2a;
+}
+
+/* ===== Navbar ===== */
+.navbar-brand img{height:28px}
+.fg-brand{color:var(--fg-primary)}
+
+/* ===== Botones marca ===== */
+.btn-fg{
+  background:var(--fg-primary) !important;
+  color:#fff !important;
+  border:none !important;
+}
+.btn-fg:hover{ background:var(--fg-primary-600) !important; color:#fff !important; }
+.btn-fg:disabled{ opacity:.85; }
+.btn-pill{ border-radius:999px; padding:.75rem 1.25rem; font-weight:600; }
+
+/* Chips (aplican a los outline que usamos como filtros) */
+.btn-outline-secondary.btn-sm{
+  border-radius:999px;
+  border-color:#e9ecef;
+  background:#fff;
+  color:#6c757d;
+}
+.btn-outline-secondary.btn-sm:hover{
+  background:#f8f9fa;
+  color:#495057;
+}
+
+/* ===== Enlaces de marca ===== */
+.link-fg{ color:var(--fg-primary); text-decoration:none; }
+.link-fg:hover{ text-decoration:underline; }
+
+/* ===== Landing (opcional) ===== */
+.fg-hero{
+  background: linear-gradient(135deg, #ffe1ec 0%, #fff 35%, #ffeaf1 100%);
+}
+
+/* ===== Login / Auth ===== */
+.auth-hero{
+  min-height: calc(100vh - 56px);   /* descuenta altura aprox. de navbar */
+  display:flex;
+  align-items:center;
+  background: linear-gradient(135deg,#ffe8f1 0%, #ffd3e3 35%, #ffffff 100%);
+}
+.auth-card{
+  border:0;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(216,61,113,.15);
+}
+.auth-illustration{
+  max-width: 420px;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,.08));
+}
+
+/* ===== Formularios ===== */
+.form-label{ font-weight:600; }
+.form-control:focus,
+.form-select:focus{
+  border-color: var(--fg-primary-600);
+  box-shadow: 0 0 0 .25rem rgba(216,61,113,.15);
+}
+
+/* ===== Utilidades previas (compat) ===== */
+.bg-fg-gradient {
+  min-height: 100vh;
+  background: linear-gradient(135deg,#ffe8f1 0%, #ffd3e3 35%, #ffffff 100%);
+}
+.card-auth { border: 0; box-shadow: 0 10px 30px rgba(216,61,113,.15); }
+
+/* ===== Ajustes reCAPTCHA ===== */
+.g-recaptcha { transform: scale(1); transform-origin: 0 0; }
+
+/* Botón del “ojito” más limpio dentro del input-group */
+.btn-eye{
+  background:#fff;
+  border-color:#dee2e6;
+}
+.btn-eye:hover{
+  background:#f8f9fa;
+}
+
+/* Resultados de búsqueda dropdown más “limpio” */
+#searchResults { max-height: 320px; overflow: auto; }
+#searchResults .dropdown-item { white-space: normal; }
+
+/* ===== Panel de Pacientes ===== */
+.table > :not(caption) > * > * { vertical-align: middle; }
+.table-hover tbody tr:hover { background:#fff6f9; }
+
+/* Badges pequeños junto a los chips */
+.badge{
+  background:#fff;
+  color:#6c757d;
+  border:1px solid #eee;
+}
+
+/* Paginación con color de marca */
+.pagination .page-link{ color:var(--fg-primary); }
+.page-item.active .page-link{
+  background:var(--fg-primary);
+  border-color:var(--fg-primary);
+}
+.pagination .page-link:hover{ color:var(--fg-primary-600); }
+
+/* Tarjetas y pequeños separadores en textos */
+.card .small span + span::before { content: " • "; margin: 0 .35rem; color: #adb5bd; }
+
+/* Sombras suaves reutilizables */
+.shadow-soft{ box-shadow:0 10px 30px rgba(216,61,113,.12); }
+
+/* Modal */
+.modal-title{ font-weight:600; }

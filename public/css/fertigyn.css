@@ -1,0 +1,223 @@
+:root {
+    --fg-primary:   #d83d71;
+    --fg-primary-dark: #c53062;
+    --fg-secondary: #b18ce6;
+    --fg-bg:        #f9f5fb;
+    --fg-text:      #222222;
+}
+
+/* ===== Fondo general ===== */
+body {
+    background-color: var(--fg-bg);
+    color: var(--fg-text);
+}
+
+/* Fondo especial para login (body tiene clase bg-fg-gradient) */
+body.bg-fg-gradient {
+    background:
+        radial-gradient(circle at top left, #fbe3ef, #f9f5fb 40%),
+        radial-gradient(circle at bottom right, #e4d5ff, #f9f5fb 60%);
+}
+
+/* ===== Navbar estilo FertiGyn ===== */
+.navbar-fg {
+    background: linear-gradient(90deg, var(--fg-secondary), var(--fg-primary));
+    color: #fff;
+}
+
+.navbar-fg .navbar-brand {
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.navbar-fg .nav-link,
+.navbar-fg .btn-link {
+    color: #fff;
+}
+
+/* ===== Botones FertiGyn ===== */
+.btn-fg {
+    background-color: var(--fg-primary);
+    border-color: var(--fg-primary);
+    color: #fff;
+    border-radius: 999px;
+    padding-inline: 1.25rem;
+    border: none;
+}
+
+.btn-fg:hover,
+.btn-fg:focus {
+    background-color: var(--fg-primary-dark);
+    border-color: var(--fg-primary-dark);
+    color: #fff;
+}
+
+.btn-pill {
+    border-radius: 999px !important;
+}
+
+/* Botón de ojo en password */
+.btn-eye {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* ===== Tarjetas y tablas ===== */
+.card {
+    border-radius: 1rem;
+}
+
+/* Card de login */
+.auth-card {
+    border-radius: 24px;
+    border: none;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+/* Encabezado de tabla */
+.table thead th {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+/* Celdas */
+.table td {
+    font-size: 0.9rem;
+}
+
+/* ===== Chips antiguos genéricos (por si algo los usa) ===== */
+.chip-cat {
+    border-radius: 999px;
+    font-size: 0.85rem;
+    padding-inline: 0.9rem;
+}
+
+/* ===== Alertas de éxito (pacientes) ===== */
+.alert-fg-success {
+    border-radius: 16px;
+    border: none;
+    background: #e8f9ea;
+    color: #1d6e3b;
+    padding: 16px 20px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+.alert-fg-success.is-fading {
+    opacity: 0;
+    transform: translateY(-6px);
+}
+
+.alert-fg-icon {
+    font-size: 1.6rem;
+}
+
+.alert-fg-title {
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+}
+
+.alert-fg-text {
+    font-size: 0.95rem;
+}
+
+/* ===== Modales FertiGyn (nuevo / editar paciente) ===== */
+.fg-modal {
+    border-radius: 24px;
+    border: none;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.10);
+}
+
+/* Emoji grande en encabezados */
+.fg-modal-emoji {
+    font-size: 2.1rem;
+}
+
+/* Etiqueta de sección (Datos generales, Contacto, etc.) */
+.fg-section-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--fg-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.fg-section-label::before {
+    content: "";
+    width: 26px;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #d83d71, #b26ad8);
+}
+
+/* Inputs grandes más redondos dentro de los modales */
+.fg-modal .form-control-lg {
+    border-radius: 999px;
+}
+
+/* ===== Barra de búsqueda redondita con lupita (pacientes) ===== */
+.fg-search-box .input-group-text {
+    border-radius: 999px 0 0 999px;
+    border-right: 0;
+    background-color: #fff;
+}
+
+.fg-search-box .form-control {
+    border-radius: 0 999px 999px 0;
+    border-left: 0;
+    background-color: #fff;
+}
+
+.fg-search-box .form-control:focus {
+    box-shadow: 0 0 0 .2rem rgba(102, 153, 255, 0.35);
+}
+
+/* ===== Chips de categoría (pacientes) ===== */
+.fg-category-chips .fg-chip {
+    min-width: 170px;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    border-width: 1px;
+    border-style: solid;
+    transition: all .15s ease-in-out;
+}
+
+.fg-chip-active {
+    background-color: var(--fg-primary);
+    border-color: var(--fg-primary);
+    color: #fff;
+}
+
+.fg-chip-active .badge {
+    background-color: #fff;
+    color: var(--fg-primary);
+}
+
+.fg-chip-inactive {
+    background-color: #fff;
+    border-color: #e0e0e0;
+    color: #444;
+}
+
+.fg-chip-inactive:hover {
+    border-color: var(--fg-primary);
+    color: var(--fg-primary);
+}
+
+/* ===== Banner de cookies (id en login) ===== */
+#cookie-banner {
+    font-size: 0.8rem;
+}
+
+#cookie-banner p {
+    margin-bottom: 0;
+    max-width: 360px;
+}

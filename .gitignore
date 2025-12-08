@@ -1,0 +1,71 @@
+# ----------------------------------
+# LOGS Y ARCHIVOS TEMPORALES
+# ----------------------------------
+*.log
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+.phpunit.result.cache
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# ----------------------------------
+# ARCHIVOS DE ENTORNO
+# ----------------------------------
+.env
+.env.*
+!.env.example        # sí queremos versionar el ejemplo
+.env.backup
+.env.production
+
+# ----------------------------------
+# DEPENDENCIAS
+# ----------------------------------
+/vendor
+/node_modules
+
+# ----------------------------------
+# LARAVEL: CACHE Y STORAGE
+# ----------------------------------
+# Cache de Laravel (se vuelve a generar)
+bootstrap/cache/*
+!bootstrap/cache/.gitignore
+
+# Storage (solo se versiona la estructura básica)
+storage/*
+!storage/app
+!storage/app/public
+!storage/framework
+!storage/framework/cache
+!storage/framework/sessions
+!storage/framework/testing
+!storage/framework/views
+!storage/logs
+!storage/logs/.gitignore
+
+# claves y otros
+/storage/*.key
+/storage/pail
+
+# ----------------------------------
+# PUBLIC (build de Vite, etc.)
+# ----------------------------------
+/public/build
+/public/hot
+/public/storage
+
+# ----------------------------------
+# EDITORES / HERRAMIENTAS
+# ----------------------------------
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+.phpactor.json
+auth.json
+Homestead.json
+Homestead.yaml

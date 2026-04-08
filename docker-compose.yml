@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: fertigyn_app
+    ports:
+      - "8080:80"         # Verás la app en http://localhost:8080
+    depends_on:
+      - db
+    env_file:
+      - .env              # Usaremos tu .env (lo ajustamos ahorita)
+    networks:
+      - fertinet
+
+  db:
+    image: mysql:8.0
+    container_name: fertigyn_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: fertigyn
+      MYSQL_USER: fertigyn
+      MYSQL_PASSWORD: fertipass
+    volumes:
+      - dbdata:/var/lib/mysql
+    ports:
+      - "3307:3306"       # Por si quieres conectarte desde tu host
+    networks:
+      - fertinet
+
+networks:
+  fertinet:
+
+volumes:
+  dbdata:
